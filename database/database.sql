@@ -1,0 +1,26 @@
+CREATE DATABASE presupuestoApp;
+
+USE presupuestoApp;
+
+-- USERS TABLE
+CREATE TABLE users(
+    id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    fullname VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE operations(
+  id INT NOT NULL AUTO_INCREMENT,
+  concepto VARCHAR(45) NULL DEFAULT NULL,
+  monto DECIMAL NOT NULL,
+  fecha DATE NOT NULL,
+  tipo VARCHAR(45) NOT NULL,
+  user_id INT NULL DEFAULT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);
+
+
+DESCRIBE users;
+DESCRIBE operations;

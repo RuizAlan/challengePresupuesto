@@ -1,0 +1,34 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/operations/edit/{{operation.id}}" method="POST">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect02">Operation</label>
+                            <select type="text" name="tipo" class="form-select" id="inputGroupSelect02">
+                                <option selected>Choose...</option>
+                                <option value="Entry">Entry</option>
+                                <option value="Egress">Egress</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="concepto" rows="2" class="form-control" placeholder="{{operation.concepto}}" required>{{operation.concepto}}</textarea>
+                        </div>
+                        <div class="from-group">
+                            <input type="number" value="{{operation.monto}}" name="monto" class="form-control" placeholder="{{operation.monto}}" required> 
+                        </div>
+                        <div class="from-group">
+                            <input type="date" value="{{operation.fecha}}" name="fecha" class="form-control" placeholder="{{operation.fecha}}" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Modify
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
